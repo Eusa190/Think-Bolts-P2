@@ -1,0 +1,139 @@
+.frosted-glass {
+    background-color: rgba(17, 24, 39, 0.8);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+.hero-gradient {
+    background: linear-gradient(135deg, #1e3a8a 0%, #4f46e5 50%, #00acc1 100%);
+}
+.glow-btn {
+    box-shadow: 0 0 15px rgba(79, 70, 229, 0.8), 0 0 30px rgba(79, 70, 229, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+.glow-btn:hover {
+    box-shadow: 0 0 25px rgba(79, 70, 229, 1), 0 0 45px rgba(79, 70, 229, 0.7);
+    transform: scale(1.05);
+}
+.card-glow:hover {
+    box-shadow: 0 10px 30px rgba(0, 172, 193, 0.2), 0 0 20px rgba(0, 172, 193, 0.3);
+    transform: translateY(-10px);
+}
+.particle-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+   
+
+
+
+/* Openings in Top Companies Section */
+.postings {
+    padding: 3rem 8%;
+}
+
+.post-head {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.post-head h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    display: inline-block;
+    background: linear-gradient(135deg, #6366F1 0%, #22D3EE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    padding: 0.5rem;
+}
+
+.posting-cards {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scrollbar-width: none; /* Firefox */
+}
+
+.posting-cards::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+.list-cards {
+    background: #1E293B;
+    min-width: 260px;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.list-cards:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.card-logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin: 0 auto 1rem;
+}
+
+.card-name h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.card-summary p {
+    font-size: 0.9rem;
+    color: #94A3B8;
+}
+
+.feature-card {
+    border: 1px solid #1f2937;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    border-color: #4f46e5;
+}
+
+.view-all-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.view-all-btn {
+    background: linear-gradient(135deg, #A5B4FC 0%, #22D3EE 100%);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 9999px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+    background: linear-gradient(135deg, #6366F1 0%, #0EA5E9 100%);
+}
+
+.navbar {
+    padding: 0.5rem 0;
+}
+
+.navbar a.active {
+    color: #6366F1;
+    font-weight: 600;
+    transform: scale(1.1);
+}

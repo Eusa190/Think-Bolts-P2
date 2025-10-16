@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElevetR - AI-Powered Career & Internship Platform</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif']
+            },
+            animation: {
+              'scroll-vertical': 'scroll-vertical 40s linear infinite',
+              'scroll-horizontal': 'scroll-horizontal 40s linear infinite',
+            },
+            keyframes: {
+              'scroll-vertical': {
+                '0%': { transform: 'translateY(0)' },
+                '100%': { transform: 'translateY(-50%)' },
+              },
+              'scroll-horizontal': {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- AOS.js (for scroll animations) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <!-- Lottie Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body class="overflow-x-hidden bg-[#0a0a1a] text-[#f9fafc]" style="font-family: 'Poppins', sans-serif;">
+
+    <!-- Navbar -->
+    <nav class="navbar fixed top-5 left-1/2 -translate-x-1/2 w-11/12 max-w-4xl bg-opacity-50 backdrop-filter backdrop-blur-lg frosted-glass z-50 shadow-md rounded-full">
+        <div class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-white">ElevetR</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="text-gray-300 hover:text-white">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-white">About</a>
+                <a href="#features" class="text-gray-300 hover:text-white">Features</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-white">Reviews</a>
+           
+            </div>
+            <div class="md:hidden">
+                <button class="text-white focus:outline-none">
+                    <i class="material-icons">menu</i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
+        <div id="particles-js" class="particle-bg"></div>
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 px-4" data-aos="fade-up">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+                Empower Careers with <span class="text-indigo-400">AI</span> — <br class="hidden md:block" /> Smart Pathways for Every Student.
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Discover your ideal career path, enhance your skills, and connect with the right internships — all powered by AI.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="/login" class="bg-indigo-600 text-white font-semibold py-3 px-8 rounded-full glow-btn">
+                    Login as Student
+                </a>
+                <a href="/login_employer" class="bg-cyan-600 text-white font-semibold py-3 px-8 rounded-full glow-btn">
+                    Login as Employer
+                </a>
+                <a href="/dashboard" class="border-2 border-gray-400 text-gray-200 font-semibold py-3 px-8 rounded-full transition duration-300 hover:bg-gray-700 hover:border-gray-700">
+                    Explore Dashboard (Demo)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-900/50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold" data-aos="fade-up">Intelligent Career Guidance for the Modern Student</h2>
+            </div>
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- Lottie Animation -->
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <div class="max-w-md mx-auto">
+                        <lottie-player src="../TEMPLATES/Ai-powered marketing tools abstract.json" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></lottie-player>
+                    </div>
+                </div>
+                <!-- Content -->
+                <div class="lg:w-1/2 text-center lg:text-left" data-aos="fade-left">
+                    <p class="text-lg text-gray-300 mb-6">
+                        Our platform leverages the power of AI to help BPUT students discover career paths and internships tailored to their skills, interests, and aspirations. By analyzing student profiles and real-world opportunities, we provide:
+                    </p>
+                    <ul class="text-lg text-gray-300 mb-6 list-disc list-inside">
+                        <li class="mb-2"><strong>Personalized Career Recommendations:</strong> Get guidance on the most suitable career options based on your skills and interests.</li>
+                        <li class="mb-2"><strong>Smart Internship Matching:</strong> Find internships that align with your goals, making it easier to gain relevant experience.</li>
+                        <li class="mb-2"><strong>Skill Development Insights:</strong> Understand the skills you need to grow and succeed in your chosen field.</li>
+                        <li class="mb-2"><strong>AI Resume Builder:</strong> Build a strong and impactful Resume by our AI by just providing your simple details.</li>
+                    </ul>
+                    <p class="text-lg text-gray-300 italic">
+                        Our mission is to bridge the gap between education and industry, ensuring every BPUT student has access to meaningful career guidance and professional opportunities.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Platform Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300 card-glow" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white mb-4">
+                        <i class="material-icons">auto_awesome</i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">AI Career Recommendations</h3>
+                    <p class="text-gray-400">Personalized career path suggestions based on your unique profile.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="feature-card bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300 card-glow" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-cyan-500 text-white mb-4">
+                        <i class="material-icons">work</i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Smart Internship Matching</h3>
+                    <p class="text-gray-400">Connect with top companies offering internships that fit your skills.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="feature-card bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300 card-glow" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white mb-4">
+                        <i class="material-icons">analytics</i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">University Analytics</h3>
+                    <p class="text-gray-400">Actionable insights for the university to track student placements.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="feature-card bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300 card-glow" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-cyan-500 text-white mb-4">
+                        <i class="material-icons">timeline</i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Skill Enhancement Roadmap</h3>
+                    <p class="text-gray-400">AI-driven roadmap to gain the skills you need for your dream job.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- "A Platform for Everyone" section removed as per user request -->
+
+    <!-- Impact Section -->
+    <section id="impact" class="py-20 bg-gray-900/50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Our Impact</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-6xl font-bold text-indigo-400" data-count="5000">0+</h3>
+                    <p class="text-gray-300 mt-2 text-lg">Students Empowered</p>
+                    <p class="text-gray-500 text-sm mt-2">We have helped over 5000 students to find their dream careers.</p>
+                </div>
+                <div class="p-6" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-6xl font-bold text-cyan-400" data-count="300">0+</h3>
+                    <p class="text-gray-300 mt-2 text-lg">Verified Companies</p>
+                    <p class="text-gray-500 text-sm mt-2">We have partnered with over 300 verified companies to provide quality internships.</p>
+                </div>
+                <div class="p-6" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-6xl font-bold text-indigo-400" data-count="95">0%</h3>
+                    <p class="text-gray-300 mt-2 text-lg">Career Match Accuracy</p>
+                    <p class="text-gray-500 text-sm mt-2">Our AI-powered career matching has an accuracy of 95%.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="postings">
+    <div class="post-head">
+      <h3>Openings in Top Companies</h3>
+    </div>
+
+    <div class="posting-cards" id="scrollContainer">
+      <a href="#" class="int-link">
+        <div class="list-cards">
+          <div class="card-logo"><img src="../TEMPLATES/tcs.avif" alt="TCS"></div>
+          <div class="card-name">
+            <h4>TCS - Data Analyst Intern</h4>
+          </div>
+          <div class="card-summary">
+            <p>Work with analytics team on real business data.</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="int-link">
+        <div class="list-cards">
+          <div class="card-logo"><img src="../TEMPLATES/infosys_logo.jpeg" alt="Infosys"></div>
+          <div class="card-name">
+            <h4>Infosys - Web Dev Intern</h4>
+          </div>
+          <div class="card-summary">
+            <p>Contribute to full-stack web development projects.</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="int-link">
+        <div class="list-cards">
+          <div class="card-logo"><img src="../TEMPLATES/wipro.webp" alt="Wipro"></div>
+          <div class="card-name">
+            <h4>Wipro - AI Research Intern</h4>
+          </div>
+          <div class="card-summary">
+            <p>Assist AI team in building ML models.</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="int-link">
+        <div class="list-cards">
+          <div class="card-logo"><img src="../TEMPLATES/ic-paytm.webp" alt="Paytm"></div>
+          <div class="card-name">
+            <h4>Paytm Service Pvt. Ltd.</h4>
+          </div>
+          <div class="card-summary">
+            <p>Digital payment and e-commerce facilitator.</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="int-link">
+        <div class="list-cards">
+          <div class="card-logo"><img src="../TEMPLATES/flipkart.webp" alt="flipkart"></div>
+          <div class="card-name">
+            <h4>Flipkart - AI Research Intern</h4>
+          </div>
+          <div class="card-summary">
+            <p>Assist AI team in building ML models.</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="int-link">
+        <div class="list-cards">
+          <div class="card-logo"><img src="../TEMPLATES/phonepe.jpeg" alt="phonepay"></div>
+          <div class="card-name">
+            <h4>Phonepay - AI Research Intern</h4>
+          </div>
+          <div class="card-summary">
+            <p>Assist AI team in building ML models.</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="int-link">
+        <div class="list-cards">
+          <div class="card-logo"><img src="../TEMPLATES/techm.avif" alt="Tech-m"></div>
+          <div class="card-name">
+            <h4>Tech mahindra - AI Research Intern</h4>
+          </div>
+          <div class="card-summary">
+            <p>Assist AI team in building ML models.</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="int-link">
+        <div class="list-cards">
+          <div class="card-logo"><img src="../TEMPLATES/tcs.avif" alt="Tcs"></div>
+          <div class="card-name">
+            <h4>TCS - AI Research Intern</h4>
+          </div>
+          <div class="card-summary">
+            <p>Work with analytics team on real business data.</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="int-link">
+        <div class="list-cards">
+          <div class="card-logo"><img src="../TEMPLATES/wipro.webp" alt="Wipro"></div>
+          <div class="card-name">
+            <h4>Wipro - AI Research Intern</h4>
+          </div>
+          <div class="card-summary">
+            <p>Assist AI team in building ML models.</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="int-link">
+        <div class="list-cards">
+          <div class="card-logo"><img src="../TEMPLATES/ic-paytm.webp" alt="paytm"></div>
+          <div class="card-name">
+            <h4>paytm - AI Research Intern</h4>
+          </div>
+          <div class="card-summary">
+            <p>Assist AI team in building ML models.</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="int-link">
+        <div class="list-cards">
+          <div class="card-logo"><img src="../TEMPLATES/techm.avif" alt="Tech-m"></div>
+          <div class="card-name">
+            <h4>Tech mahindra - AI Research Intern</h4>
+          </div>
+          <div class="card-summary">
+            <p>Assist AI team in building ML models.</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="int-link">
+        <div class="list-cards">
+          <div class="card-logo"><img src="../TEMPLATES/zomato.webp" alt="Zomato"></div>
+          <div class="card-name">
+            <h4>Zomato - AI Research Intern</h4>
+          </div>
+          <div class="card-summary">
+            <p>Assist AI team in building ML models.</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="int-link">
+        <div class="list-cards">
+          <div class="card-logo"><img src="../TEMPLATES/flipkart.webp" alt="flipkart"></div>
+          <div class="card-name">
+            <h4>Flipkart - AI Research Intern</h4>
+          </div>
+          <div class="card-summary">
+            <p>Assist AI team in building ML models.</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="int-link">
+        <div class="list-cards">
+          <div class="card-logo"><img src="../TEMPLATES/phonepe.jpeg" alt="phonepay"></div>
+          <div class="card-name">
+            <h4>Phonepay - AI Research Intern</h4>
+          </div>
+          <div class="card-summary">
+            <p>Assist AI team in building ML models.</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="int-link">
+        <div class="list-cards">
+          <div class="card-logo"><img src="../TEMPLATES/zomato.webp" alt="zomato"></div>
+          <div class="card-name">
+            <h4>zomato- AI Research Intern</h4>
+          </div>
+          <div class="card-summary">
+            <p>Assist AI team in building ML models.</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="int-link">
+        <div class="list-cards">
+          <div class="card-logo"><img src="../TEMPLATES/flipkart.webp" alt="flipkart"></div>
+          <div class="card-name">
+            <h4>Flipkart - AI Research Intern</h4>
+          </div>
+          <div class="card-summary">
+            <p>Assist AI team in building ML models.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="view-all-container">
+      <a href="intern.html" class="view-all-btn">View All Internships →</a>
+    </div>
+  </section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-20 overflow-hidden">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">What Our Users Say</h2>
+        <div class="flex flex-col lg:flex-row gap-8">
+
+            <!-- Left Banner -->
+            <div class="lg:w-1/3 flex flex-col justify-center items-center text-center p-8 bg-gray-800 rounded-lg shadow-lg" data-aos="fade-right">
+                <img src="../TEMPLATES/inverted-quote.png" alt="quote" class="w-16 h-16 mb-4">
+                <h3 class="text-2xl font-bold mb-4">Join the community of 10L+ satisfied internship seekers...</h3>
+                <a href="review.html" class="text-indigo-400 font-semibold hover:underline">Feel Free to Add Review +</a>
+            </div>
+
+            <!-- Right Scrolling Reviews -->
+            <div class="lg:w-2/3" data-aos="fade-left">
+                <div class="relative h-[400px] overflow-hidden">
+                    <div class="flex flex-col animate-scroll-vertical space-y-4">
+                        <!-- This will be a long column of cards that scrolls up -->
+                        <!-- Card 1 -->
+                        <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-full card-glow">
+                            <div class="flex items-center mb-4">
+                                <img class="w-12 h-12 rounded-full mr-4 object-cover" src="../TEMPLATES/ME.jpeg" alt="user">
+                                <div>
+                                    <h4 class="font-semibold text-white">Bibek Biswal</h4>
+                                    <p class="text-gray-400">Frontend Developer</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 italic">"The UI is clean and smooth. I loved how easily I could build a professional resume and apply directly for internships — everything in one place!"</p>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-full card-glow">
+                            <div class="flex items-center mb-4">
+                                <img class="w-12 h-12 rounded-full mr-4 object-cover" src="../TEMPLATES/ind.jpeg" alt="user">
+                                <div>
+                                    <h4 class="font-semibold text-white">Indrajit Mondol</h4>
+                                    <p class="text-gray-400">Backend Developer</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 italic">"As someone from a non-tech background, I was amazed how simple it was to find opportunities through Elevatr. It bridges the gap between students and real jobs."</p>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-full card-glow">
+                            <div class="flex items-center mb-4">
+                                <img class="w-12 h-12 rounded-full mr-4 object-cover" src="../TEMPLATES/sundar.webp" alt="user">
+                                <div>
+                                    <h4 class="font-semibold text-white">Sundar Pichai</h4>
+                                    <p class="text-gray-400">CEO Google</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 italic">"Elevatr made finding an internship so simple! The AI suggestions were spot-on and will help understand which roles truly fit your skills. Highly recommend it to every student."</p>
+                        </div>
+                        <!-- Card 4 (Placeholder for srv.enc) -->
+                         <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-full card-glow">
+                            <div class="flex items-center mb-4">
+                                <img class="w-12 h-12 rounded-full mr-4 object-cover" src="../TEMPLATES/srv.enc" alt="user">
+                                <div>
+                                    <h4 class="font-semibold text-white">Sourav Nanda</h4>
+                                    <p class="text-gray-400">Full stack Developer</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 italic">"Elevatr made finding an internship so simple! The AI suggestions were spot-on and will help understand which roles truly fit your skills. Highly recommend it to every student."</p>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-full card-glow">
+                            <div class="flex items-center mb-4">
+                                <img class="w-12 h-12 rounded-full mr-4 object-cover" src="../TEMPLATES/mandua.jpeg" alt="user">
+                                <div>
+                                    <h4 class="font-semibold text-white">Jagdish Paikray</h4>
+                                    <p class="text-gray-400">Data anlyist</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 italic">"The personalized career guidance on Elevatr helped me figure out my next steps after graduation. It feels like having a mentor available 24/7."</p>
+                        </div>
+                        <!-- Card 6 -->
+                        <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-full card-glow">
+                            <div class="flex items-center mb-4">
+                                <img class="w-12 h-12 rounded-full mr-4 object-cover" src="../TEMPLATES/elon-musk.jpg" alt="user">
+                                <div>
+                                    <h4 class="font-semibold text-white">Elon Musk</h4>
+                                    <p class="text-gray-400">Full stack Developer</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 italic">"Elevatr saved me so much time. I didn't have to browse hundreds of listings — the internship matches were relevant and perfectly aligned with my interests."</p>
+                        </div>
+                        <!-- Duplicate cards for seamless scroll -->
+                        <!-- Card 1 -->
+                        <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-full card-glow">
+                            <div class="flex items-center mb-4">
+                                <img class="w-12 h-12 rounded-full mr-4 object-cover" src="../TEMPLATES/ME.jpeg" alt="user">
+                                <div>
+                                    <h4 class="font-semibold text-white">Bibek Biswal</h4>
+                                    <p class="text-gray-400">Frontend Developer</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 italic">"The UI is clean and smooth. I loved how easily I could build a professional resume and apply directly for internships — everything in one place!"</p>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-full card-glow">
+                            <div class="flex items-center mb-4">
+                                <img class="w-12 h-12 rounded-full mr-4 object-cover" src="../TEMPLATES/ind.jpeg" alt="user">
+                                <div>
+                                    <h4 class="font-semibold text-white">Indrajit Mondol</h4>
+                                    <p class="text-gray-400">Backend Developer</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 italic">"As someone from a non-tech background, I was amazed how simple it was to find opportunities through Elevatr. It bridges the gap between students and real jobs."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- CTA Footer Section -->
+    <footer class="bg-gray-900">
+        <div class="container mx-auto py-12 px-6 text-center">
+            <h3 class="text-2xl md:text-3xl font-bold text-white mb-4" data-aos="fade-down">
+                Your future is data-driven. Let AI guide the way.
+            </h3>
+            <div class="flex justify-center gap-4 mb-8" data-aos="fade-up">
+                <a href="#home" class="bg-indigo-600 text-white font-semibold py-3 px-8 rounded-full glow-btn">
+                    Get Started
+                </a>
+                <a href="#about" class="border-2 border-gray-400 text-gray-200 font-semibold py-3 px-8 rounded-full transition duration-300 hover:bg-gray-700 hover:border-gray-700">
+                    Learn More
+                </a>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 mb-4 md:mb-0">&copy; 2025 ElevetR. All Rights Reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="text-gray-500 hover:text-white">About</a>
+                    <a href="#" class="text-gray-500 hover:text-white">Contact</a>
+                    <a href="#" class="text-gray-500 hover:text-white">Privacy</a>
+                    <a href="#" class="text-gray-500 hover:text-white">LinkedIn</a>
+                    <a href="#" class="text-gray-500 hover:text-white">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS.js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../JS/script.js"></script>
+
+</body>
+</html>
